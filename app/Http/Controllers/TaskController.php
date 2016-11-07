@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\TaskStoreRequest;
-use App\Task;
 use App\Assignment;
+use App\Project;
+use App\Task;
 use Carbon\Carbon;
 
 class TaskController extends Controller
