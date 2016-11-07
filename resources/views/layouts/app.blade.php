@@ -17,6 +17,11 @@
     <script>
         window.Laravel = <?php echo json_encode([
             'csrfToken' => csrf_token(),
+            'CLIENT_ID' => env('CLIENT_ID'),
+            'CLIENT_SECRET' => env('CLIENT_SECRET'),
+            'AUTH_URL' => env('AUTH_URL'),
+            'AUTH_TOKEN_URL' => env('AUTH_TOKEN_URL'),
+            'REDIRECT_URL' => env('REDIRECT_URL')
         ]); ?>
     </script>
 </head>

@@ -7,3 +7,12 @@
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+pre.json {
+    font-size: 100%;
+    font-weight: 700;
+    color: #fff;
+    background-color: #333;
+    overflow: scroll;
+    border: none;
+}

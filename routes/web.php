@@ -15,3 +15,7 @@ Auth::routes();
 Route::get('/', function () {
     return view('home');
 });
+
+Route::get('console', function () {
+    return view('console');
+});

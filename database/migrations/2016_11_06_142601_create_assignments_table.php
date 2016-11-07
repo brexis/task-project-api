@@ -17,7 +17,7 @@ class CreateAssignmentsTable extends Migration
             $table->increments('id');
             $table->integer('task_id')->unsigned();
             $table->integer('user_id')->unsigned();
-            $table->text('reason')->nullable();
+            $table->text('comment')->nullable();
             $table->timestamps();
         });
 

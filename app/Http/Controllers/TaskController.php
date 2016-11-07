@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\TaskStoreRequest;
 use App\Task;
 use App\Assignment;
+use Carbon\Carbon;
 
 class TaskController extends Controller
 {
@@ -19,10 +20,16 @@ class TaskController extends Controller
 
     public function store(TaskStoreRequest $request)
     {
-        $task = new Task($request->all());
-        $task->save();
+        $project = Project::findOrFail($request->input('project_id'));
 
-        return response()->json($task);
+        if ($project->deadline->gt(Carbon::now())) {
+            $task = new Task($request->all());
+            $task->save();
+
+            return response()->json($task);
+        } else {
+            return response()->json(['error' => 'Project deadline reached']);
+        }
     }
 
     public function update(Request $request, $id)
