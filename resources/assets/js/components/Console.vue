@@ -78,7 +78,7 @@ export default {
     data() {
         return {
             authorized: false,
-            url: 'http://localhost:8000/api/projects',
+            url: '',
             method: 'GET',
             params: [],
             request: null,
