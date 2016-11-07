@@ -131,7 +131,10 @@
             </tbody>
         </table>
 
-        <h2>User</h2>
+        <h2>Users</h2>
+        <h4>List</h4>
+        <p>Get all the users</p>
+        <pre><kbd>GET</kbd> /api/users</pre>
         <h4>Update profile</h4>
         <p>Update the profile of the authorized user</p>
         <pre><kbd>PUT</kbd> /api/users/update</pre>

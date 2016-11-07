@@ -22,5 +22,8 @@ Route::group(['middleware' => 'auth:api'], function () {
     ]);
 
     Route::post('tasks/assign', 'TaskController@assign');
-    Route::put('users/update', 'UserController@update');
+
+    Route::resource('users', 'UserController', [
+        'only' => ['index', 'update']
+    ]);
 });
